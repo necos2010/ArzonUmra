@@ -1,0 +1,67 @@
+.UmraPucks-h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 57px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 78px;
+    padding: 16px;
+}
+
+.dropdown {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 6px;
+    width: 250px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.no-results {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #666;
+    margin: 2rem 0;
+}
+
+.more-show {
+    margin-left: 650px;
+    border-radius: 15px;
+    padding: 5px 50px;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .Umrapucks-fragment {
+        display: none;
+    }
+
+    .UmraPucks-h2 {
+        font-weight: 500;
+
+    }
+
+    .dropdown-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dropdown {
+        width: 300px;
+    }
+
+}

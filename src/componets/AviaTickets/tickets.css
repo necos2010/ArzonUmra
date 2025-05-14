@@ -1,0 +1,23 @@
+.banner {
+    background-image: url(./src/assets/clouds.svg);
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-responsive {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        display: none;
+    }
+
+    .banner-responsive {
+        background-image: url(./src/assets/small-cloud.svg);
+        width: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

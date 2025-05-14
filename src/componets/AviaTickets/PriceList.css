@@ -1,0 +1,11 @@
+.pricelist-first {
+    background-image: url(./src/assets/Dubai.svg);
+}
+
+.pricelist-second {
+    background-image: url(./src/assets/Turkey.svg);
+}
+
+.pricelist-third {
+    background-image: url(./src/assets/Egypte.svg);
+}

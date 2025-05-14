@@ -1,0 +1,104 @@
+.filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  font-family: sans-serif;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  gap: 0;
+}
+
+.filter-input,
+.filter-button {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  border: none;
+  padding: 12px 16px;
+  font-size: 14px;
+  gap: 8px;
+  flex: 1;
+}
+
+.filter-input input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.select-field select {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.swap-icon,
+.calendar-icon {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.left-rounded {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.right-rounded {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-right: none;
+}
+
+.filter-button {
+  background-color: #d14200;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.filter-button:hover {
+  background-color: #a83300;
+}
+
+/* 📱 Mobile responsive layout */
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    border-radius: 0;
+    gap: 8px;
+  }
+
+  .filter-input,
+  .filter-button {
+    width: 100%;
+    border-radius: 16px !important;
+    border-right: none;
+  }
+
+  .filter-input {
+    justify-content: space-between;
+  }
+
+  .swap-field,
+  .icon-input,
+  .select-field {
+    border-radius: 16px;
+    background-color: #fff;
+    border: 1px solid #eee;
+  }
+
+  .filter-button {
+    margin-top: 8px;
+  }
+}

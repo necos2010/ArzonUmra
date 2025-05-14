@@ -1,0 +1,10 @@
+.conteiner {
+    max-width: 1525px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.breadcrumb {
+    margin-left: 60px;
+    margin-top: 15px;
+}
