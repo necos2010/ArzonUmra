@@ -1,0 +1,133 @@
+.tour-data-wrapper h2 {
+    margin-left: 41px;
+}
+
+.tour-data-wrapper {
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+.tour-scroll-outer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Remove margin-left: -44px; */
+}
+
+.tour-scrolll-container {
+    display: flex;
+    gap: 5rem;
+    padding: 1rem 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    cursor: grab;
+    justify-content: flex-start;
+    /* <-- начинаем с первой карточки */
+    -webkit-overflow-scrolling: touch;
+}
+
+.tour-scrolll-container.active {
+    cursor: grabbing;
+}
+
+.tour-scrolll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.TourData {
+    width: 413px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.TourData:hover {
+    transform: scale(1.03);
+}
+
+.TourData-img {
+    width: 413px;
+    height: 474px;
+    object-fit: cover;
+    display: block;
+}
+
+.TourData-price {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: white;
+    color: black;
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    z-index: 2;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.TourData-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: white;
+}
+
+.TourData-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #f1f1f1;
+}
+
+.TourData-info h2 {
+    margin: 0 0 0.3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .tour-scrolll-container {
+        gap: 1rem;
+    }
+
+    .tour-data-wrapper {
+        margin: 1rem 1rem 0rem 1rem;
+        padding: 0;
+    }
+
+    .TourData {
+        width: 280px;
+    }
+
+    .TourData-img {
+        width: 280px;
+        height: 340px;
+    }
+
+    .TourData-price {
+        font-size: 0.8rem;
+        padding: 3px 8px;
+    }
+
+    .TourData-info h2 {
+        font-size: 1.1rem;
+    }
+
+    .TourData-info p {
+        font-size: 0.75rem;
+    }
+
+    .tour-data-wrapper h2 {
+        margin-left: 20px;
+        font-size: 1.3rem;
+    }
+}

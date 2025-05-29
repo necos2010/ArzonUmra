@@ -1,0 +1,82 @@
+.review-main-wrapper {
+    padding: 20px;
+    overflow: hidden;
+}
+
+.rewiev-h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-left: 20px;
+    padding-bottom: 15px;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.rewiev {
+    flex: 0 0 auto;
+    background-color: #eeeeee;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    width: 360px;
+    transition: all 0.3s ease;
+}
+
+.rewiev-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rewiev-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.rewiev-name {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.rewiev p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #111;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .rewiev {
+        width: 300px;
+        padding: 16px;
+    }
+
+    .rewiev-info img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .rewiev-name {
+        font-size: 0.95rem;
+    }
+
+    .rewiev p {
+        font-size: 0.9rem;
+    }
+}

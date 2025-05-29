@@ -1,0 +1,106 @@
+.city-list-container {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    font-family: Arial, sans-serif;
+}
+
+
+.city-list-title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.city-list-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.city-list-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 1250px;
+    width: 100%;
+}
+
+.city-list-card {
+    background-color: #f8f8f8;
+    border-radius: 20px;
+    width: 305px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    border: none;
+    flex-direction: row;
+    gap: 77px;
+}
+
+.city-list-card:hover {
+    background-color: #e8e8e8;
+}
+
+.city-list-flag {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+.city-list-city-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #000000;
+    line-height: 1.2;
+}
+
+.city-list-country-name {
+    font-size: 0.8rem;
+    color: #666666;
+    margin: 0;
+    line-height: 1.2;
+}
+
+@media (max-width: 1024px) {
+    .city-list-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .city-list-title {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .city-list-container {
+        min-height: 100vh;
+        justify-content: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .city-list-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        /* центрируем карточки по горизонтали */
+    }
+
+    .city-list-card {
+        width: 90%;
+        /* чтобы карточка не была слишком широкой */
+        max-width: 320px;
+    }
+}

@@ -1,0 +1,74 @@
+.tour-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 3.5rem;
+    scroll-behavior: smooth;
+    cursor: grab;
+    justify-content: space-around;
+}
+
+.tour-scroll-container.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.tour-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.tour-cards {
+    position: relative;
+    min-width: 250px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background: white;
+    transition: transform 0.3s ease;
+}
+
+.tour-cards:hover {
+    transform: scale(1.05);
+}
+
+.tour-image {
+    width: 305px;
+    height: 430px;
+    object-fit: cover;
+    position: relative;
+}
+
+.tour-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: #ffffff;
+    padding: 1rem;
+}
+
+.tour-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.tour-info p {
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.tour-info a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #ff5722;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .tour-scroll-container {
+        gap: 1.5rem;
+        padding: 15px;
+    }
+}

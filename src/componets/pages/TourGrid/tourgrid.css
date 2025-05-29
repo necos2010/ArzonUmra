@@ -1,0 +1,59 @@
+body,
+html {
+    height: 100%;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.containerr {
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.slider {
+    white-space: nowrap;
+    display: flex;
+}
+
+.logos {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+.fab,
+.logos-images {
+    width: 150px;
+    margin-right: 50px;
+    opacity: 0;
+    animation: fade-in 1s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .fab,
+    .logos-images {
+        width: 100px;
+    }
+}

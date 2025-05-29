@@ -1,0 +1,127 @@
+.footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 50px;
+    background-color: rgba(242, 242, 242, 1);
+    margin-top: 20px;
+    padding: 30px;
+
+}
+
+.footer-first-wrapper {
+    display: block;
+}
+
+.footer-first-wrapper img {
+    padding-bottom: 25px;
+}
+
+.location-wrapper {
+    display: block;
+}
+
+.location-wrapper div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+}
+
+
+.footer-second-wrapper {
+    display: block;
+}
+
+.footer-second-wrapper h2 {
+    padding-bottom: 25px;
+}
+
+.footer-third-wrapper {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.footer-third-wrapper h2 {
+    font-size: 26px;
+}
+
+.footer-third-wrapper h2 {
+    padding-bottom: 25px;
+}
+
+.app-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 64px;
+}
+
+.footer-fourth-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-fourth-wrapper h2 {
+    padding-bottom: 25px;
+}
+
+.payment-logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    /* .footer-first-wrapper img {} */
+
+    .footer-third-wrapper h2 {
+        padding-right: 38px;
+        font-weight: bold
+    }
+
+    .footer-fourth-wrapper h2 {
+        margin: 0;
+        padding: 0;
+        padding-right: 158px;
+        font-weight: bold
+    }
+
+    .payment-logos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 90px;
+        gap: 5px;
+    }
+
+
+
+    .footer-column-group {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-second-wrapper,
+    .location-wrapper {
+        width: 100%;
+    }
+
+
+
+}

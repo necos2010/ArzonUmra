@@ -1,0 +1,64 @@
+.countup-container {
+    display: flex;
+    max-width: 1400px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 118px;
+    /* Увеличиваем отступ сверху на 30px */
+    margin-bottom: 90px;
+    /* Увеличиваем отступ снизу на 30px */
+    height: 391px;
+    /* Увеличиваем высоту контейнера на 30px */
+    background-color: #000000;
+    border-radius: 50px;
+    gap: 30px;
+}
+
+.countup-container div {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    /* Увеличиваем промежуток между заголовками и подзаголовками */
+}
+
+.countup-container div h1 {
+    font-family: Lato sans-serif;
+    font-size: 87px;
+    /* Увеличиваем шрифт на 30px */
+    font-weight: 500;
+    margin: 0;
+    width: 300px;
+    /* Увеличиваем ширину блока */
+    height: 171px;
+    /* Увеличиваем высоту блока */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0px 0px;
+    background-color: rgba(38, 38, 38, 1);
+    /* Добавляем фон */
+    cursor: pointer;
+}
+
+.countup-container div h3 {
+    font-family: Lato sans-serif;
+    font-size: 24px;
+    /* Увеличиваем шрифт на 30px */
+    font-weight: 500;
+    margin: 0;
+    width: 300px;
+    /* Увеличиваем ширину блока */
+    height: 171px;
+    /* Увеличиваем высоту блока */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 20px 20px;
+    background-color: rgba(38, 38, 38, 1);
+    /* Добавляем фон */
+    cursor: pointer;
+}
