@@ -1,4 +1,3 @@
-import React from "react";
 // css
 import "./App.css";
 // bootstrap
@@ -7,14 +6,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import MainPage from "./componets/MainPage/mainPage";
 import Partners from "./componets/BizningHamkorlar/partners";
 import AboutUs from "./componets/AboutUs/aboutUs";
-gt
+
 // react-router-dom
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import VideoReview from "./componets/VideoReview/videoReview";
-import BreadCrumbs from "./componets/pages/BreadCrumbs";
 import Econom from "./componets/Ekonom/econom";
 import UmraPucks from "./componets/UmraPucks/UmraPucks";
-import Tours from "./componets/pages/Tours/tours";
 import Tickets from "./componets/AviaTickets/tickets";
 
 function App() {

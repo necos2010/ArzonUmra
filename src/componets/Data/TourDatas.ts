@@ -1,4 +1,14 @@
-const TourDatas = [
+// src/Data/TourDatas.ts
+
+export interface TourDataItem {
+  id: number;
+  title: string;
+  header: string;
+  description: string;
+  imageUrl: string;
+}
+
+const TourDatas: TourDataItem[] = [
   {
     id: 1,
     title: "Dubai 500$",
@@ -11,14 +21,14 @@ const TourDatas = [
     title: "Mist 300$",
     header: "Lorem ipsum",
     description: "Morеm ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageUrl: "./src/assets/Egypt.svg", // реальный URL или путь к локальному изображению
+    imageUrl: "./src/assets/Egypt.svg",
   },
   {
     id: 3,
     title: "Turkiya 550$",
     header: "Lorem ipsum",
     description: "Morеm ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageUrl: "./src/assets/Turkey.svg", // реальный URL или путь к локальному изображению
+    imageUrl: "./src/assets/Turkey.svg",
   },
 ];
 

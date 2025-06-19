@@ -1,4 +1,14 @@
-const TourCard = [
+// src/Data/TourCard.ts
+
+export interface TourCardItem {
+  id: number;
+  title: string;
+  description: string;
+  imageUrl: string;
+  linkText: string;
+}
+
+const TourCard: TourCardItem[] = [
   {
     id: 1,
     title: "Bali, Indonesia",
@@ -28,4 +38,5 @@ const TourCard = [
     linkText: "Ko‘proq",
   },
 ];
+
 export default TourCard;

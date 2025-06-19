@@ -1,4 +1,3 @@
-import React from "react";
 import cities from "../Data/cites";
 import "./CityList.css";
 

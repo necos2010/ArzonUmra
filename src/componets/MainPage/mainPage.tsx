@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../pages/Header/header";
 import TourGrid from "../pages/TourGrid/tourgrid";
 import Carousel from "../pages/Carousel/UmraCarousel";

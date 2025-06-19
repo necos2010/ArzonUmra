@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./header.css";
 import Modal from "../modal";
 
 function Header() {
-  const [openModal, setOpenModal] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+const [openModal, setOpenModal] = useState<boolean>(false);
+const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
 
   return (
     <div>
@@ -44,7 +45,7 @@ function Header() {
             className="header-button mobile-only"
             onClick={() => setOpenModal(true)}
           >
-            Bog'lanish
+            Boglanish
           </button>
         </nav>
 
@@ -52,7 +53,7 @@ function Header() {
           className="header-button desktop-only"
           onClick={() => setOpenModal(true)}
         >
-          Bog'lanish
+          Boglanish
         </button>
       </header>
 

@@ -1,20 +1,23 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Header from "../pages/Header/header";
 import Footer from "../pages/Footer/footer";
 import TourGrid from "../pages/TourGrid/tourgrid";
 import { Link, NavLink } from "react-router-dom";
-
 import "./aboutus.css";
-import StatsPanel from "./StatsPanel/StatsPanel";
+// import StatsPanel from "../AboutUs/StatsPanel/StatsPanel";
+
 
 function AboutUs() {
-  const [openIndex, setOpenIndex] = useState(null);
+const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleAccordion = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  const accordionItems = [
+const toggleAccordion = (index: number): void => {
+  setOpenIndex(openIndex === index ? null : index);
+};
+   interface accordionItems{
+    title: string,
+    content: string,
+  }
+  const accordionItems: accordionItems[] = [
     {
       title: "Maqsadimiz",
       content:
@@ -77,7 +80,7 @@ function AboutUs() {
             </div>
           </div>
         </div>
-        <StatsPanel />
+        {/* <StatsPanel /> */}
         <div className="aboutus-parters">
           <Link to="/partners">Bizning hamkorlarimiz</Link>
           <TourGrid />

@@ -1,30 +1,37 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import Header from "../pages/Header/header";
 import UmraCarousel from "../pages/Carousel/UmraCarousel";
 import Footer from "../pages/Footer/footer";
 import Tours from "../pages/Tours/tours";
 import tourData from "../Data/cards";
 import "./UmraPucks.css";
+import { Tour } from "../../types";
 
 function UmraPucks() {
-  const [avia, setAvia] = useState("");
-  const [tourType, setTourType] = useState("");
-  const [firms, setFirms] = useState("");
-  const [hotelDistance, setHotelDistance] = useState("");
-  const [showMore, setShowMore] = useState(false);
+  const [avia, setAvia] = useState<string>("");
+  const [tourType, setTourType] = useState<string>("");
+  const [firms, setFirms] = useState<string>("");
+  const [hotelDistance, setHotelDistance] = useState<string>("");
+  const [showMore, setShowMore] = useState<boolean>(false);
 
   const extraTours = tourData.filter(
-    (tour) => tour.id === 10 || tour.id === 11 || tour.id === 12
+    (tour: Tour) => tour.id === 10 || tour.id === 11 || tour.id === 12
   );
 
-  const baseFilteredTours = tourData.filter((tour) => {
-    return (
-      (avia === "" || tour.airlineLogos.some((logo) => logo.includes(avia))) &&
-      (tourType === "" || tour.classType.toLowerCase().includes(tourType)) &&
-      (firms === "" ||
-        tour.airlineLogos.some((logo) => logo.includes(firms))) &&
-      (hotelDistance === "" || tour.hotelDistance === hotelDistance)
-    );
+  const baseFilteredTours = tourData.filter((tour: Tour) => {
+    const matchesAirline = avia === "" || 
+      tour.airlineLogos.some(logo => logo.toLowerCase().includes(avia.toLowerCase()));
+    
+    const matchesTourType = tourType === "" || 
+      tour.classType.toLowerCase() === tourType.toLowerCase();
+    
+    const matchesFirm = firms === "" || 
+      tour.airlineLogos.some(logo => logo.toLowerCase().includes(firms.toLowerCase()));
+    
+    const matchesDistance = hotelDistance === "" || 
+      tour.hotelDistance === hotelDistance;
+
+    return matchesAirline && matchesTourType && matchesFirm && matchesDistance;
   });
 
   const displayedTours = showMore
@@ -56,7 +63,7 @@ function UmraPucks() {
           value={tourType}
           onChange={(e) => setTourType(e.target.value)}
         >
-          <option value="">To’plam Turi</option>
+          <option value="">To'plam Turi</option>
           <option value="economy">Economy</option>
           <option value="standard">Standard</option>
           <option value="comfort">Comfort</option>

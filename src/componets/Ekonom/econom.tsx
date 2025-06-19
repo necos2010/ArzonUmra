@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../pages/Header/header";
 import Footer from "../pages/Footer/footer";
 import BreadCrumbs from "../pages/BreadCrumbs";

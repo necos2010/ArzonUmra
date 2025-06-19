@@ -1,9 +1,6 @@
-import React from "react";
 import "./tickets.css";
-import { Link } from "react-router-dom";
 import Header from "../pages/Header/header";
 import Footer from "../pages/Footer/footer";
-import PriceList from "./PriceList";
 import CityList from "./CityList";
 import TicketFilter from "./TicketFilter";
 import TourCard from "./TourCard/TourCards";

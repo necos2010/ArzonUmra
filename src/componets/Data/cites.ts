@@ -1,4 +1,11 @@
-const cities = [
+export interface City {
+  id: number;
+  flag: string;
+  city: string;
+  country: string;
+}
+
+const cities: City[] = [
   {
     id: 1,
     flag: "https://flagcdn.com/w80/ru.png",

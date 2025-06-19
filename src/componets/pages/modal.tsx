@@ -1,9 +1,12 @@
-import React from "react";
 import "./modal.css";
 
-function Modal({ closeModal }) {
-  const handleBackgroundClick = (e) => {
-    if (e.target.className === "modalBackground") {
+interface ModalProps {
+  closeModal: (value: boolean) => void;
+}
+
+function Modal({ closeModal }: ModalProps) {
+  const handleBackgroundClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.currentTarget === e.target) {
       closeModal(false);
     }
   };
@@ -11,10 +14,10 @@ function Modal({ closeModal }) {
   return (
     <div className="modalBackground" onClick={handleBackgroundClick}>
       <div className="modalContainer" onClick={(e) => e.stopPropagation()}>
-        <h3>Bog’lanish</h3>
+        <h3>Bog'lanish</h3>
         <button onClick={() => closeModal(false)}>X</button>
         <p>
-          Ma’lumotlaringizni qoldiring va operatirim tez orada sizga aloqaga
+          Ma'lumotlaringizni qoldiring va operatirim tez orada sizga aloqaga
           chiqadi
         </p>
         <input type="text" placeholder="Ismi sharifingizni kiriting" />

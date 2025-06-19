@@ -1,11 +1,19 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 import "./tour.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Tour } from "../../../types";
+
+
+interface ToursProps {
+  tours?: Tour[];
+  isLoading?: boolean;
+  error?: Error | null;
+  withConditionals?: boolean;
+  withSlider?: boolean;
+}
 
 function Tours({
   tours = [],
@@ -13,7 +21,7 @@ function Tours({
   error = null,
   withConditionals = true,
   withSlider = false,
-}) {
+}: ToursProps) {
   if (withConditionals) {
     if (isLoading)
       return <div className="loading-spinner">Loading tours...</div>;
@@ -59,7 +67,7 @@ function Tours({
                   <p>
                     from <span>{tour.price}$</span>
                   </p>
-                  <Link to={`econom`}>More</Link>
+                  <Link to={`/tour/${tour.id}`}>More</Link>
                 </div>
               </div>
             </SwiperSlide>
@@ -85,7 +93,7 @@ function Tours({
                 <p>
                   from <span>{tour.price}$</span>
                 </p>
-                <Link to={`econom`}>More</Link>
+                <Link to={`/tour/${tour.id}`}>More</Link>
               </div>
             </div>
           ))}

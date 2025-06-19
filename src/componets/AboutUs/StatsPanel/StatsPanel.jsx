@@ -1,9 +1,8 @@
-import React from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import "./StatsPanel.css";
 
-function CounterPage() {
+function StatsPanel() {
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
@@ -50,4 +49,4 @@ function CounterPage() {
   );
 }
 
-export default CounterPage;
+export default StatsPanel;

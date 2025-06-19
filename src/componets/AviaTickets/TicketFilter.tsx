@@ -1,4 +1,3 @@
-import React from "react";
 import "./TicketFilter.css";
 
 const TicketFilter = () => {

@@ -1,4 +1,3 @@
-import React from "react";
 import "./PriceList.css";
 
 const PriceList = () => {

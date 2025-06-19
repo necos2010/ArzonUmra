@@ -1,4 +1,3 @@
-import React from "react";
 import "./tourgrid.css";
 
 const TourGrid = () => {

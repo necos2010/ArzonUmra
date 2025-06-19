@@ -1,4 +1,13 @@
-const VideoData = [
+// src/Data/VideoData.ts
+
+export interface VideoItem {
+  id: number;
+  title: string;
+  url: string;
+  thumbnail: string;
+}
+
+const VideoData: VideoItem[] = [
   {
     id: 1,
     title: "Short Video 1",
@@ -38,13 +47,13 @@ const VideoData = [
   {
     id: 7,
     title: "Short Video 7",
-    url: "https://www.youtube.com/embed/abc123", // Replace with actual video ID
+    url: "https://www.youtube.com/embed/abc123",
     thumbnail: "./src/assets/ReviewV-7.svg",
   },
   {
     id: 8,
     title: "Short Video 8",
-    url: "https://www.youtube.com/embed/xyz789", // Replace with actual video ID
+    url: "https://www.youtube.com/embed/xyz789",
     thumbnail: "./src/assets/ReviewV-8.svg",
   },
 ];

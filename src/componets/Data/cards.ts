@@ -1,4 +1,15 @@
-const tourData = [
+
+
+export interface Tour {
+  id: number;
+  airlineLogos: string[];
+  overlayImage: string;
+  classType: "ECONOMY" | "VIP" | "LUX" | "COMFORT";
+  price: number;
+  additionalInfo: string[];
+}
+
+const tourData: Tour[] = [
   {
     id: 1,
     airlineLogos: ["./src/assets/SAT.svg", "./src/assets/Uzbairways.svg"],

@@ -1,15 +1,17 @@
 import { Link, useLocation, useParams } from "react-router-dom";
 
-function Breadcrumb() {
+interface BreadcrumbProps {
+  filteredType?: string; // Add this if you need FilteredType
+}
+
+function Breadcrumb({ filteredType }: BreadcrumbProps) {
   const { id } = useParams();
   const location = useLocation();
-  let pathnames = location.pathname.split("/").filter((x) => isNaN(x));
+  let pathnames = location.pathname.split("/").filter((x) => x !== "" && isNaN(Number(x)));
 
   if (pathnames.length > 0 && pathnames[0] !== "UmraPucks") {
     pathnames.unshift("Asosiy");
   }
-
-  console.log(location);
 
   return (
     <nav className="breadcrumb">
@@ -21,7 +23,7 @@ function Breadcrumb() {
 
         const displayName =
           isLast && id
-            ? `${FilteredType} Paketi`
+            ? `${filteredType || ''} Paketi` // Use filteredType if provided
             : name.charAt(0).toUpperCase() + name.slice(1);
 
         return (

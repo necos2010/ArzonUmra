@@ -1,7 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./rewiev.css";
 
-const reviews = [
+// Define the type for each review item
+interface Review {
+  name: string;
+  img: string;
+  text: string;
+}
+
+const reviews: Review[] = [
   {
     name: "Abdul Aziz Al-Azhariy",
     img: "./src/assets/aziz.svg",
@@ -39,7 +46,8 @@ const reviews = [
   },
 ];
 
-const ReviewCard = ({ name, img, text }) => (
+// Add explicit prop types to the ReviewCard component
+const ReviewCard: React.FC<Review> = ({ name, img, text }) => (
   <div className="rewiev">
     <div className="rewiev-info">
       <img src={img} alt={name} />
@@ -49,15 +57,16 @@ const ReviewCard = ({ name, img, text }) => (
   </div>
 );
 
-function Rewiev() {
-  const scrollRef = useRef(null);
+const Rewiev: React.FC = () => {
+  // Define ref type explicitly as HTMLDivElement or null
+  const scrollRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
       if (scrollRef.current) {
-        scrollRef.current.scrollLeft += 1; // авто скролл
+        scrollRef.current.scrollLeft += 1; // auto scroll
       }
-    }, 30); // скорость
+    }, 30); // speed
 
     return () => clearInterval(interval);
   }, []);
@@ -72,6 +81,6 @@ function Rewiev() {
       </div>
     </div>
   );
-}
+};
 
 export default Rewiev;
